@@ -1,0 +1,46 @@
+
+<mat-card style="height:60%;width:60%">
+   <mat-grid-list cols="2" rowHeight="175px">
+        <mat-grid-tile>
+            <mat-list>
+                <div style="text-align: center;">
+                    <div>
+                        <img mat-card-lg-image src="../../../assets/img/official-artwork/{{pokemon?.id}}.png">
+                    </div>               
+                    <div>No.{{pokemon?.id | number: '3.'}}</div>
+                </div>
+            </mat-list>           
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-list>
+                <mat-list-item>
+                    <div>{{pokemon?.name}}</div>
+                    <button mat-button (click)="launchAudio()">
+                        <mat-icon>play_circle_outline</mat-icon>
+                    </button>
+                </mat-list-item>
+                <mat-list-item>
+                    <mat-chip-list>
+                        <mat-chip *ngFor="let type of pokemon?.types">
+                            {{type}}
+                        </mat-chip>                   
+                    </mat-chip-list>
+                </mat-list-item>
+                <mat-list-item>
+                    <div>Taille : {{pokemon?.height | number: '.1'}} m</div>
+                </mat-list-item>
+                <mat-list-item>
+                    <div>Poids : {{pokemon?.weight | number: '.1'}} kg</div>               
+                </mat-list-item>
+            </mat-list>  
+            
+        </mat-grid-tile>
+        
+        <mat-grid-tile colspan="2">
+            <div>{{pokemon?.description}}</div>
+        </mat-grid-tile>
+        
+    </mat-grid-list>
+    
+</mat-card>
+<!-- <button (click)="goBack()" >Return to pokedex</button> -->

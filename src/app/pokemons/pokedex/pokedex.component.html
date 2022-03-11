@@ -1,0 +1,7 @@
+<mat-drawer-container autosize>
+  <mat-drawer mode="side" opened><app-pokemon-list (pokemonSelected)="onPokemonSelected($event)"></app-pokemon-list></mat-drawer>
+  <mat-drawer-content id="detail" style="height: 100vh;"><app-pokemon-detail [idPokemon]="my_id"></app-pokemon-detail></mat-drawer-content>
+</mat-drawer-container>
+  
+
+

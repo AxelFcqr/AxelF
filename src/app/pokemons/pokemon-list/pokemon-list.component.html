@@ -1,0 +1,18 @@
+
+
+
+    <mat-form-field appearance="fill">
+      <input matInput type="text" placeholder="Search" [(ngModel)]="text" (keyup)="searchPoke()">
+    </mat-form-field>
+
+
+    <mat-nav-list style="overflow: auto;height: 85vh;" infinite-scroll [scrollWindow]="false" (scrolled)="onScroll($event)">
+      
+      <mat-list-item *ngFor="let pokemon of pokemons" (click)="onPokemonSelected(pokemon.id);" ><!--routerLink="/pokemons/{{pokemon.id}}">-->
+        <img matListAvatar src="../../../assets/img/sprites/{{pokemon.id}}.png">
+        <a>{{pokemon.id}}.{{pokemon.name}}</a>
+
+
+
+      </mat-list-item>
+    </mat-nav-list>
