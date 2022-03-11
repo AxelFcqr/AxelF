@@ -15,13 +15,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
   declarations: [
     PokemonListComponent,
     PokemonDetailComponent,
-    PokedexComponent
+    PokedexComponent,
+    TeamComponent
   ],
   imports: [
     CommonModule,
